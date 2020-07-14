@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="cicd-impFlow" doc:id="c887496a-f347-4b98-b62b-3920a4abc8b9" >
 		<http:listener doc:name="Listener" doc:id="8858d4ff-fb4d-4ac7-9c49-0455c9351e14" config-ref="HTTP_Listener_config" path="/cicd-imp"/>
-		<logger level="INFO" doc:name="Logger" doc:id="ef78a1b5-73a6-4eb6-9bfb-760cb4a26b93" message="cicd implementation"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ef78a1b5-73a6-4eb6-9bfb-760cb4a26b93" message="cicd implementation-jenkins"/>
 		<set-payload value="cicd implementation project." doc:name="Set Payload" doc:id="fe0f42bc-12cd-40dc-a62a-89715106d821" />
 		<logger level="INFO" doc:name="Logger" doc:id="4f25ee58-4417-4059-856a-78b39c3dca1e" message="Flow end...!!!"/>
 	</flow>
