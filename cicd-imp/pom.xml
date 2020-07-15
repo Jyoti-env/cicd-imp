@@ -33,6 +33,35 @@
 				<configuration>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+			<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<configuration>
+			<cloudHubDeployment>
+				<muleVersion>${app.runtime}</muleVersion>
+				<username>jyotitest10</username>
+				<password>ennVee@1234</password>
+			    <environment>Sandbox</environment> 
+				<!-- <regoin>eu-central-1 </regoin> -->
+				<WorkerType>Micro</WorkerType>
+				<Workers>1</Workers>
+				<uri>https://anypoint.mulesoft.com</uri>;
+				<applicationName>cicd-imp</applicationName>
+			</cloudHubDeployment>
+		</configuration>
+		<executions>
+			<execution>
+				<id>deploy</id>
+				<phase>deploy</phase>
+		<goals>
+			<goal>deploy</goal>
+		</goals>
+		</execution>
+		</executions>
+		</plugin>
+			
 		</plugins>
 	</build>
 
